@@ -1,0 +1,7 @@
+# Binaries and build files
+bin/
+build/
+*.o
+*.out
+*.exe
+*.stash
