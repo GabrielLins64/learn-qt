@@ -43,10 +43,10 @@ For simple tutorial files (everythin in src that isn't in "graphics"), do:
 chmod +x compile.sh
 ```
 
-2. Run the bash script passing your program name, without the *.cpp* extension as argument (even if it is inside `src/<anything>/`). For instance, if you have your file as `src/basic/example.cpp`, do:
+2. Run the bash script passing the module and your program name (without the *.cpp* extension) as arguments. For instance, if you have your file as `src/strings/init.cpp`, do:
 
 ```shell
-./compile.sh example
+./compile.sh strings init
 ```
 
 ### Graphic projects
