@@ -1,6 +1,7 @@
 {
   "files.associations": {
     "ostream": "cpp",
-    "qapplication": "cpp"
+    "qapplication": "cpp",
+    "qmainwindow": "cpp"
   }
 }
