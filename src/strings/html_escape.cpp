@@ -5,7 +5,7 @@ int main(void)
 {
     QTextStream out(stdout);
 
-    QFile file("assets/cprog.c");
+    QFile file("assets/texts/cprog.c");
 
     if (!file.open(QIODevice::ReadOnly))
     {
