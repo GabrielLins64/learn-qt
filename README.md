@@ -9,6 +9,7 @@ Learning QT5 with C++
 - [Installation](#installation)
 - [Compiling](#compiling)
   - [Single scripts](#single-scripts)
+  - [Many sources](#many-sources)
   - [Graphic projects](#graphic-projects)
 - [References](#references)
 
@@ -47,6 +48,14 @@ chmod +x compile.sh
 
 ```shell
 ./compile.sh strings init
+```
+
+### Many sources
+
+If your program is build with several .cpp files, then pass all of them in command line, using the main source as the last one. For instance, if your sources are `Book.cpp` and `sortcustomclass.cpp` (this one having the main function), and both located at `src/containers`, do:
+
+```shell
+./compile.sh containers Book sortcustomclass
 ```
 
 ### Graphic projects
