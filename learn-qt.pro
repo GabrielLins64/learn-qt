@@ -4,7 +4,7 @@
 
 TEMPLATE = app
 TARGET = bin/learn-qt
-INCLUDEPATH += .
+INCLUDEPATH += . include
 
 # The following define makes your compiler warn you if you use any
 # feature of Qt which has been marked as deprecated (the exact warnings
@@ -18,6 +18,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 # Input
-SOURCES += src/graphics/simple.cpp
+SOURCES += src/graphics/plusminus.cpp\
+        src/graphics/pm_main.cpp
+
+HEADERS += include/plusminus.h
 
 QT += widgets
