@@ -5,7 +5,7 @@ int main(void)
 {
     QTextStream out{stdout};
 
-    QFile f{"assets/words.txt"};
+    QFile f{"assets/texts/words.txt"};
 
     if (!f.open(QIODevice::ReadOnly))
     {

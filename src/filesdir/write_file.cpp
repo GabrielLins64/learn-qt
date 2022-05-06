@@ -5,7 +5,7 @@ int main(void)
 {
     QTextStream out{stdout};
 
-    QString filename = "assets/distros.txt";
+    QString filename = "assets/texts/distros.txt";
     QFile f{filename};
 
     if (f.open(QIODevice::WriteOnly))
