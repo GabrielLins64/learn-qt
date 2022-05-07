@@ -18,9 +18,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 # Input
-SOURCES += src/layout/review.cpp\
-        src/layout/r_main.cpp
+SOURCES += src/events_and_signals/timer.cpp\
+        src/events_and_signals/t_main.cpp
 
-HEADERS += include/review.hpp
+HEADERS += include/timer.hpp
 
 QT += widgets

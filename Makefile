@@ -52,10 +52,10 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = src/layout/review.cpp \
-		src/layout/r_main.cpp 
-OBJECTS       = review.o \
-		r_main.o
+SOURCES       = src/events_and_signals/timer.cpp \
+		src/events_and_signals/t_main.cpp 
+OBJECTS       = timer.o \
+		t_main.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/linux.conf \
@@ -131,8 +131,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exceptions.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
-		learn-qt.pro include/review.hpp src/layout/review.cpp \
-		src/layout/r_main.cpp
+		learn-qt.pro include/timer.hpp src/events_and_signals/timer.cpp \
+		src/events_and_signals/t_main.cpp
 QMAKE_TARGET  = learn-qt
 DESTDIR       = bin/
 TARGET        = bin/learn-qt
@@ -313,8 +313,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents include/review.hpp $(DISTDIR)/
-	$(COPY_FILE) --parents src/layout/review.cpp src/layout/r_main.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents include/timer.hpp $(DISTDIR)/
+	$(COPY_FILE) --parents src/events_and_signals/timer.cpp src/events_and_signals/t_main.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -364,11 +364,11 @@ compiler_clean: compiler_moc_predefs_clean
 
 ####### Compile
 
-review.o: src/layout/review.cpp include/review.hpp
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o review.o src/layout/review.cpp
+timer.o: src/events_and_signals/timer.cpp include/timer.hpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o timer.o src/events_and_signals/timer.cpp
 
-r_main.o: src/layout/r_main.cpp include/review.hpp
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o r_main.o src/layout/r_main.cpp
+t_main.o: src/events_and_signals/t_main.cpp include/timer.hpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o t_main.o src/events_and_signals/t_main.cpp
 
 ####### Install
 

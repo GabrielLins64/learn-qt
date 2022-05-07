@@ -1,0 +1,8 @@
+{
+  "version": "2.0.0",
+  "tasks": [{
+      "label": "runscript",
+      "command": "qmake && make && ./bin/learn-qt && make clean",
+      "type": "shell"
+  }]
+}
